@@ -1,22 +1,21 @@
-const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "your-project.firebaseapp.com",
-    projectId: "your-project",
-    storageBucket: "your-project.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "1:123456789:web:abcdef123456"
-};
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
-function bookAppointment(date, time, clientName, service) {
+function bookAppointment() {
+    const clientName = document.getElementById("name").value;
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    const service = document.getElementById("service").value;
+  
+    // Save to Firestore
     db.collection("bookings").add({
-        date: date,
-        time: time,
-        clientName: clientName,
-        service: service,
-        status: "confirmed"
-    }).then(() => {
-        alert("Booking confirmed!");
+      clientName: clientName,
+      date: date,
+      time: time,
+      service: service,
+      status: "Pending"
+    })
+    .then(() => {
+      alert("Booking saved! 🎉");
+    })
+    .catch((error) => {
+      alert("Error: " + error);
     });
-}
+  }
