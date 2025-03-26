@@ -1,0 +1,12 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+/* Color Variables */
+:root {
+    --soft-peach: #FFDAC1;
+    --blush-pink: #FF9AA2;
+    --dusty-rose: #E2B0A6;
+    --taupe: #B5A197;
+    --soft-white: #FFF8F5;
+    --deep-mauve: #8C6A5D;
+}

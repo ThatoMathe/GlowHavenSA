@@ -3,65 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlowHavenSA</title>
+    <title>GlowHavenSA Beauty Salon</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+        .booking-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-
-<script>
-    firebase.initializeApp(firebaseConfig);
-  </script>
-
-<!-- Your Firebase Config (from Project Settings) -->
-<script>
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "glowhavenza.firebaseapp.com",
-    projectId: "glowhavenza",
-    storageBucket: "glowhavenza.appspot.com",
-    messagingSenderId: "123456789",
-    appId: "1:123456789:web:abcdef123456"
-  };
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore(); // database
-</script>
-
 <body>
-    <header>
-        <h1 class="text-center my-4">Welcome to GlowHavenSA</h1>
-    </header>
-
-    <main>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <p>Your content goes here...</p>
+            <a class="navbar-brand" href="#">GlowHavenSA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Book Online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </main>
+    </nav>
 
-    <footer class="text-center mt-4">
-        <p>&copy; 2025 GlowHavenSA. All rights reserved.</p>
+    <div class="container">
+        
+        <div class="row my-5 py-4">
+            <div class="col-md-6">
+                <h1>Welcome to GlowHavenSA</h1>
+                <p class="lead">Your premier beauty destination in South Africa</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/interior.jpg" alt="Salon Interior" class="img-fluid rounded">
+            </div>
+        </div>
+
+        <!-- Booking Section -->
+        <div class="row my-5">
+            <div class="col-md-6">
+                <h2>Book an Appointment</h2>
+                <form id="bookingForm">
+                    <div class="mb-3">
+                        <label for="clientName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="clientName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="clientPhone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="serviceType" class="form-label">Service</label>
+                        <select class="form-select" id="serviceType" required>
+                            <option value="">Select a service</option>
+                            <option value="Haircut">Haircut - R300</option>
+                            <option value="Manicure">Manicure - R250</option>
+                            <option value="Facial">Facial - R400</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="appointmentDate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="appointmentDate" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="appointmentTime" class="form-label">Time</label>
+                        <input type="time" class="form-control" id="appointmentTime" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Our Services</h2>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Hair Styling</a>
+                    <a href="#" class="list-group-item list-group-item-action">Nail Care</a>
+                    <a href="#" class="list-group-item list-group-item-action">Skin Treatments</a>
+                    <a href="#" class="list-group-item list-group-item-action">Makeup</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Section for demo reasons-->
+        <div class="row my-5" id="adminSection">
+            <div class="col-12">
+                <h2>Recent Bookings</h2>
+                <div id="bookingsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contact Us</h5>
+                    <p>Mmabatho<br>Mahikeng, SA<br>Phone: 018 000 0000</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Opening Hours</h5>
+                    <p>Monday-Friday: 9am-7pm<br>Saturday: 9am-2pm<br>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2023 GlowHavenSA. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Firebase and other JS -->
+    <script type="module">
+        // Firebase Import
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA4IYaCqjfAbH8xrSipChJWy4pJJkf2LPA",
+            authDomain: "glowhavenza.firebaseapp.com",
+            projectId: "glowhavenza",
+            storageBucket: "glowhavenza.firebasestorage.app",
+            messagingSenderId: "667313723125",
+            appId: "1:667313723125:web:5256b355262d2bd2d757bc",
+            measurementId: "G-X3NSHDX8MH"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Booking Form Handler
+        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const bookingData = {
+                name: document.getElementById('clientName').value,
+                phone: document.getElementById('clientPhone').value,
+                service: document.getElementById('serviceType').value,
+                date: document.getElementById('appointmentDate').value,
+                time: document.getElementById('appointmentTime').value,
+                status: "Pending",
+                createdAt: new Date()
+            };
+
+            try {
+                await addDoc(collection(db, "bookings"), bookingData);
+                alert('Booking submitted successfully!');
+                e.target.reset();
+            } catch (error) {
+                console.error("Error adding booking: ", error);
+                alert('Error submitting booking. Please try again.');
+            }
+        });
+
+        // Real-time bookings display
+        onSnapshot(collection(db, "bookings"), (snapshot) => {
+            const bookingsList = document.getElementById('bookingsList');
+            bookingsList.innerHTML = '';
+            
+            snapshot.forEach((doc) => {
+                const booking = doc.data();
+                bookingsList.innerHTML += `
+                    <div class="booking-card">
+                        <h5>${booking.name}</h5>
+                        <p><strong>Service:</strong> ${booking.service}</p>
+                        <p><strong>Date:</strong> ${booking.date} at ${booking.time}</p>
+                        <p><strong>Status:</strong> ${booking.status}</p>
+                    </div>
+                `;
+            });
+        });
+    </script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js";
-      
-      </script>
-
-<script src="js/admin.js"></script>  
-<script src="js/booking.js"></script> 
-<script src="js/admin.js"></script>
-
 </body>
 </html>
