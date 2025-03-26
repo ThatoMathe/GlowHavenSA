@@ -1,3 +1,5 @@
 mkdir beauty-salon-website
 cd beauty-salon-website
 git init
+
+firebaseConfig.js
