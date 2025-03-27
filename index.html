@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
     <!-- Your CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -31,6 +33,7 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
     </div>
 </div>
             
@@ -43,6 +46,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <!-- NAVBAR BUTTON (Standard Practice: Smaller, Less Prominent) -->
                     <li class="nav-item ms-2 d-none d-lg-block"><a class="btn btn-outline-light book-now-nav" href="booking.html">Book Now</a></li>
@@ -60,7 +64,189 @@
             <a href="booking.html" class="btn btn-primary btn-lg hero-btn pulse">Book Your Session</a>
         </div>
     </div>
-    
+
+    <!-- ===== SERVICES SECTION ===== -->
+
+ <section class="services-section">
+        <!-- Facial Treatments -->
+        <div class="service-category">
+            <h2><i class="fas fa-spa"></i> Skin Treatments</h2>
+            <div class="service-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image15.jpg');">
+                        <span class="service-time">60 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Signature Glow Facial</h3>
+                        <span class="price">R450</span>
+                        <p>Deep cleansing, exfoliation and hydration with our premium organic products for radiant skin.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image14.jpg');">
+                        <span class="service-time">45 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Chemical Peel</h3>
+                        <span class="price">R600</span>
+                        <p>Revitalize your skin with our gentle yet effective AHA/BHA peel treatment.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image16.jpg');">
+                        <span class="service-time">75 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Microdermabrasion</h3>
+                        <span class="price">R750</span>
+                        <p>Professional exfoliation to reduce fine lines, sun damage and acne scars.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Nail Services -->
+        <div class="service-category">
+            <h2><i class="fas fa-hand-sparkles"></i> Nail Care</h2>
+            <div class="service-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image17.jpg');">
+                        <span class="service-time">45 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Luxury Manicure</h3>
+                        <span class="price">R350</span>
+                        <p>Includes nail shaping, cuticle care, massage and paraffin wax treatment.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image19.jpg');">
+                        <span class="service-time">60 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Spa Pedicure</h3>
+                        <span class="price">R400</span>
+                        <p>Revitalizing foot treatment with exfoliation and extended massage.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image20.jpg');">
+                        <span class="service-time">75 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Gel Polish Application</h3>
+                        <span class="price">R450</span>
+                        <p>Long-lasting gel polish with nail prep and finishing touches.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Waxing Services -->
+        <div class="service-category">
+            <h2><i class="fas fa-leaf"></i> Waxing</h2>
+            <div class="service-grid">
+                <!-- Card 1 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image21.jpg');">
+                        <span class="service-time">20 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Eyebrow Shaping</h3>
+                        <span class="price">R200</span>
+                        <p>Professional brow wax and shape to frame your face perfectly.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('images/Salon images/image23.jpg');">
+                        <span class="service-time">45 min</span>
+                    </div>
+                    <div class="service-details">
+                        <h3>Full Leg Wax</h3>
+                        <span class="price">R550</span>
+                        <p>Silky smooth legs with our premium hard wax formula.</p>
+                        <a href="booking.html" class="service-btn">
+                            Book Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===== BOOKING SECTION ===== -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Book Your Appointment</h1>
+        <div id="calendar" class="mb-4"></div>
+        
+        <div id="bookingForm" class="card p-4">
+            <h3 class="mb-3">Appointment Details</h3>
+            <form id="appointmentForm">
+                <div class="mb-3">
+                    <label for="clientName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="clientName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="clientPhone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="clientPhone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="serviceType" class="form-label">Service</label>
+                    <select class="form-select" id="serviceType" required>
+                        <option value="">Select a service</option>
+                        <option value="Haircut">Pedicure</option>
+                        <option value="Manicure">Manicure</option>
+                        <option value="Facial">Facial</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="appointmentDate" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="appointmentDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="appointmentTime" class="form-label">Time</label>
+                    <input type="time" class="form-control" id="appointmentTime" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
     <!-- ===== FOOTER SECTION ===== -->
     <footer class="footer">
         <div class="container">
@@ -78,7 +264,7 @@
                     <h5>Contact</h5>
                     <p><i class="fas fa-map-marker-alt"></i> Mmabatho, Mahikeng</p>
                     <p><i class="fas fa-phone"></i> 018 000 0000</p>
-                    <p><i class="fas fa-envelope"></i> info@glowhaven.co.za</p>
+                    <p><i class="fas fa-envelope"></i> info@glowhavenza.co.za</p>
                 </div>
                 <div class="col-md-4">
                     <h5>Hours</h5>
