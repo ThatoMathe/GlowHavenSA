@@ -43,12 +43,11 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <!-- NAVBAR BUTTON (Standard Practice: Smaller, Less Prominent) -->
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item ms-2 d-none d-lg-block"><a class="btn btn-outline-light book-now-nav" href="booking.html">Book Now</a></li>
                 </ul>
             </div>
@@ -57,17 +56,19 @@
 
     <!-- ===== HERO SECTION ===== -->
     <div class="hero-section">
-        <div class="hero-image" style="background-image: url('images/Salon\ images/image11.jpg');"></div>
+        <section id="home" class="hero-section">
+        <div class="hero-image" style="background-image: url('images/Salon images/image11.jpg');"></div>
         <div class="hero-overlay">
             <h1>Radiant Beauty Starts Here</h1>
             <p>Pamper yourself with our luxurious treatments</p>
             <a href="booking.html" class="btn btn-primary btn-lg hero-btn pulse">Book Your Session</a>
         </div>
+        </div>
     </div>
 
     <!-- ===== SERVICES SECTION ===== -->
 
- <section class="services-section">
+    <section id="services" class="services-section">
         <!-- Facial Treatments -->
         <div class="service-category">
             <h2><i class="fas fa-spa"></i> Skin Treatments</h2>
@@ -207,7 +208,117 @@
         </div>
     </section>
 
+    <!-- ===== ABOUT SECTION ===== -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-header">
+            <h2>Meet One Mathe</h2>
+            <p>Your trusted beauty therapist with world-class expertise</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/Salon images/image0.jpg" alt="One Mathe - Professional Beauty Therapist" class="img-fluid">
+            </div>
+            
+            <div class="about-text">
+                <h3>Creating Beauty, Building Confidence</h3>
+                <p>Born and bred in Mahikeng, North West, One Mathe is a passionate beauty therapist who went to Mmabatho High School before honing her craft at Beautiko College. With a year of formal training and another year of hands-on experience in the beauty industry, One has mastered a wide range of services including professional makeup artistry, luxurious facials, meticulous manicures and pedicures, precise waxing, brow tinting, eyelash installations, and flawless wig applications.</p>
+                
+                <p>Her career highlights include working aboard cruise ships and in premium spas, where she refined her skills in delivering world-class beauty services. Clients adore One for her sweet, kind demeanor and her exceptional ability to create a relaxing, luxurious environment where everyone feels pampered and beautiful.</p>
+                
+                <p>One's dream for Glow Haven is to grow into a mobile salon, bringing premium beauty services directly to clients across the region. She takes immense pride in helping people feel confident in their skin, offering affordable luxury that makes every client feel special.</p>
+                
+                <div class="signature">One Mathe</div>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Services Offered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Countries Worked</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ===== GALLERY SECTION ===== -->
+<section id="gallery" class="gallery-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Gallery</h2>
+        <div class="row g-3">
+            <div class="col-md-4 col-6">
+                <img src="images/Salon images/image1.jpg" alt="Salon image" class="img-fluid gallery-img">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="images/Salon images/image2.jpg" alt="Salon image" class="img-fluid gallery-img">
+            </div>
+            <div class="col-md-4 col-6">
+                <img src="images/Salon images/image3.jpg" alt="Salon image" class="img-fluid gallery-img">
+            </div>
+            
+        </div>
+    </div>
+</section>
 
+        <!-- ===== CONTACT SECTION ===== -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-4">Get In Touch</h2>
+            <p class="lead">We'd love to hear from you</p>
+            <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="contact-info-card p-4 p-lg-5 h-100">
+                    <h3 class="mb-4"><i class="fas fa-map-marker-alt me-3"></i> Visit Us</h3>
+                    <p class="mb-4">Megacity<br>Mmabatho, Mahikeng<br>South Africa</p>
+
+                    <h3 class="mb-4"><i class="fas fa-clock me-3"></i> Operating Hours</h3>
+                    <ul class="hours-list mb-4">
+                        <li><span>Monday - Friday:</span> 9:00 AM - 7:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 2:00 PM</li>
+                        <li><span>Sunday:</span> Closed</li>
+                    </ul>
+                    <p class="text-muted small">*Please note we may be unable to respond outside business hours</p>
+
+                    <h3 class="mb-4"><i class="fas fa-phone-alt me-3"></i> Contact Details</h3>
+                    <p class="mb-3"><i class="fas fa-phone me-2"></i> <a href="tel:+27180000000">018 000 0000</a></p>
+                    <p class="mb-4"><i class="fas fa-envelope me-2"></i> <a href="mailto:info@glowhavenza.co.za">info@glowhavenza.co.za</a></p>
+
+                    <h3 class="mb-4"><i class="fas fa-hashtag me-3"></i> Connect With Us</h3>
+                    <div class="social-media-icons">
+                        <a href="https://instagram.com/yourhandle" class="social-icon" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/yourpage" class="social-icon" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://tiktok.com/@yourhandle" class="social-icon" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/27123456789" class="social-icon" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="disclaimer mt-4 p-3">
+                        <p class="small mb-0"><i class="fas fa-info-circle me-2"></i> For DMs and WhatsApp messages, please allow 24-48 hours for response during business days. For urgent inquiries, please call during operating hours.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container mt-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dyourlocation" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
 
     <!-- ===== BOOKING SECTION ===== -->
     <div class="container my-5">

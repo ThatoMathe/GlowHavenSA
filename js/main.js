@@ -23,3 +23,35 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const now = new Date();
+    const hour = now.getHours();
+    const day = now.getDay(); // 0 = Sunday
+    
+    const responseIndicator = document.createElement('div');
+    responseIndicator.className = 'response-time p-3 mt-3 text-center';
+    
+    if (day === 0 || (day === 6 && hour >= 14) || hour < 9 || hour >= 19) {
+        responseIndicator.innerHTML = `
+            <p class="mb-1"><i class="fas fa-clock me-2"></i> Currently outside business hours</p>
+            <p class="small mb-0">Responses may take longer than usual</p>
+        `;
+    } else {
+        responseIndicator.innerHTML = `
+            <p class="mb-1"><i class="fas fa-bolt me-2"></i> Currently within business hours</p>
+            <p class="small mb-0">Average response time: 2-4 hours</p>
+        `;
+    }
+    
+    document.querySelector('.contact-info-card').appendChild(responseIndicator);
+});
