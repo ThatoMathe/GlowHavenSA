@@ -856,7 +856,43 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
+/* Mobile-Specific Styling */
+@media (max-width: 767.98px) {
+    .contact-section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .contact-info-card {
+        border-radius: 10px !important;
+    }
+    
+    .hours-list li {
+        font-size: 0.9rem;
+    }
+    
+    .social-media-icons {
+        justify-content: center;
+    }
+    
+    .map-container {
+        border-radius: 10px;
+        border-width: 3px;
+    }
 
+
+/* Touch Targets */
+a[href^="tel:"], 
+a[href^="mailto:"] {
+    display: inline-block;
+    padding: 2px 0; 
+}
+
+.social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+}
 /* Map Container Styling */
 .map-container {
     border-radius: 12px;
