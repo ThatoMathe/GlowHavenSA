@@ -644,14 +644,19 @@ body {
     color: white;
 }
 
-/* Instagram Highlight */
+/* Instagram Highlight - Mobile Optimized */
 .ig-highlight {
     position: relative;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .ig-highlight img {
     width: 100%;
-    height: 350px;
+    height: auto;
+    aspect-ratio: 4/5; /* Better mobile proportions */
     object-fit: cover;
     display: block;
 }
@@ -661,41 +666,78 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    padding: 2rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    padding: 1.5rem 1rem;
     text-align: center;
 }
 
 .ig-overlay .btn {
     border-radius: 30px;
-    padding: 8px 25px;
+    padding: 8px 20px;
     font-weight: 500;
+    font-size: 0.9rem;
+    background: var(--rosegold);
+    border: none;
 }
 
-/* Video Demo */
+/* Video Demo - Mobile Optimized */
 .video-demo {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0;
+    margin-top: 1.5rem;
 }
 
 .video-demo video {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     display: block;
-    margin-bottom: 1rem;
+    aspect-ratio: 9/16; /* Vertical video format */
+    background: #000;
 }
 
 .video-caption {
     text-align: center;
     color: var(--taupe);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-top: 0.8rem;
+    padding: 0 0.5rem;
 }
 
-/* Responsive Adjustments */
+/* Mobile-Specific Adjustments */
 @media (max-width: 768px) {
-    .ig-highlight img {
-        height: 280px;
+    .ig-highlight {
+        margin: 0 -15px; /* Full-bleed on mobile */
+        border-radius: 0;
     }
     
+    .ig-highlight img {
+        aspect-ratio: 1/1; /* Square on mobile */
+    }
+    
+    .ig-overlay {
+        padding: 1rem;
+    }
+    
+    .video-demo {
+        margin: 0 -15px 1.5rem; /* Full-bleed */
+    }
+    
+    .video-demo video {
+        border-radius: 0;
+    }
+}
+
+/* Tablet Adjustments */
+@media (max-width: 992px) and (min-width: 769px) {
+    .ig-highlight img {
+        height: 280px;
+        aspect-ratio: unset;
+    }
+    
+    .video-demo video {
+        height: 280px;
+        aspect-ratio: unset;
+    }
+  
     .social-header {
         padding: 1rem;
     }
@@ -703,7 +745,6 @@ body {
     .social-header h3 {
         font-size: 1.2rem;
     }
-}
 
  /* ===== CONTACT SECTION ===== */
 .contact-section {
