@@ -207,6 +207,7 @@
             </div>
         </div>
     </section>
+    </section>
 
     <!-- ===== ABOUT SECTION ===== -->
 <section id="about" class="about-section">
@@ -249,21 +250,134 @@
         </div>
     </div>
 </section>
-    <!-- ===== GALLERY SECTION ===== -->
+ <!-- ===== GALLERY SECTION ===== -->
 <section id="gallery" class="gallery-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5">Our Gallery</h2>
-        <div class="row g-3">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-4">Our Gallery</h2>
+            <p class="lead">See the Glow Haven Experience</p>
+            <div class="divider mx-auto"></div>
+        </div>
+
+        <!-- Mirror Frame Grid - CORRECTED STRUCTURE -->
+        <div class="row g-4">
+            <!-- Gallery Item 1 -->
             <div class="col-md-4 col-6">
-                <img src="images/Salon images/image1.jpg" alt="Salon image" class="img-fluid gallery-img">
-            </div>
-            <div class="col-md-4 col-6">
-                <img src="images/Salon images/image2.jpg" alt="Salon image" class="img-fluid gallery-img">
-            </div>
-            <div class="col-md-4 col-6">
-                <img src="images/Salon images/image3.jpg" alt="Salon image" class="img-fluid gallery-img">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image1.jpg" alt="Bridal Makeup" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
             </div>
             
+            <!-- Gallery Item 2 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image4.jpg" alt="Nail Art" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image3.jpg" alt="Facial Treatment" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image9.jpg" alt="Makeup Application" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image12.jpg" alt="Wig Installation" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image27.jpg" alt="Spa Service" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 7 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image18.jpg" alt="Bridal Makeup" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 8 -->
+            <div class="col-md-4 col-6">
+                <div class="mirror-frame">
+                    <img src="images/Salon images/image25.jpg" alt="Pedicure" class="img-fluid">
+                    <div class="mirror-reflection"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+       <!-- ===== SOCIAL MEDIA SECTION ===== -->
+<section id="social" class="social-section py-5">
+    <div class="container">
+        <div class="section-header text-center mb-5">
+            <h2 class="display-4">Glimpse Our World</h2>
+            <p class="lead">Follow @GlowHavenZA for daily beauty inspiration</p>
+            <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Instagram Feed -->
+            <div class="col-md-6">
+                <div class="social-card instagram-card">
+                    <div class="social-header">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram Highlights</h3>
+                        <a href="https://instagram.com/GlowHavenZA" target="_blank" class="follow-btn">Follow Us</a>
+                    </div>
+                    
+                    <div class="ig-highlight">
+                        <img src="images/Salon images/ig.jpg" alt="Our Instagram feed" class="img-fluid">
+                        <div class="ig-overlay">
+                            <a href="https://instagram.com/GlowHavenZA" target="_blank" class="btn btn-light">
+                                <i class="fab fa-instagram me-2"></i> View Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Video Demo -->
+            <div class="col-md-6">
+                <div class="social-card video-card">
+                    <div class="social-header">
+                        <i class="fas fa-video"></i>
+                        <h3>Wig Installation Demo</h3>
+                        <a href="#" class="follow-btn">Watch More</a>
+                    </div>
+                    
+                    <div class="video-demo">
+                        <video poster="images/social/wig-video-poster.jpg" controls>
+                            <source src="images/Salon images/video.mp4" type="video/mp4">
+                            Your browser does not support this video.
+                        </video>
+                        <div class="video-caption">
+                            <p>Professional wig installation at Glow Haven</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -316,9 +430,22 @@
                     </div>
                 </div>
             </div>
-            <div class="map-container mt-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dyourlocation" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Map Container -->
+             <div class="map-container mt-4">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.715487726356!2d25.633015315032296!3d-25.77558398357417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eb5d8e4a1d7ab6f%3A0x9a9e9b3b3b3b3b3b!2sMegacity%2C%20Mmabatho%2C%20Mahikeng%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
             </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
 
     <!-- ===== BOOKING SECTION ===== -->
     <div class="container my-5">
